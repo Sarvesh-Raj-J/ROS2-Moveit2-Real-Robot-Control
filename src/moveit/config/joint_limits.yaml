@@ -1,0 +1,33 @@
+default_velocity_scaling_factor: 0.1
+default_acceleration_scaling_factor: 0.1
+joint_limits:
+  link1_joint:
+    has_velocity_limits: true
+    max_velocity: 20.0
+    has_acceleration_limits: true
+    max_acceleration: 10.0
+  link2_joint:
+    has_velocity_limits: true
+    max_velocity: 15.0
+    has_acceleration_limits: true
+    max_acceleration: 7.5
+  link3_joint:
+    has_velocity_limits: true
+    max_velocity: 15.0
+    has_acceleration_limits: true
+    max_acceleration: 7.5
+  link4_joint:
+    has_velocity_limits: true
+    max_velocity: 10.0
+    has_acceleration_limits: true
+    max_acceleration: 5.0
+  link5_joint:
+    has_velocity_limits: true
+    max_velocity: 10.0
+    has_acceleration_limits: true
+    max_acceleration: 5.0
+  rotating_base_joint:
+    has_velocity_limits: true
+    max_velocity: 20.0
+    has_acceleration_limits: true
+    max_acceleration: 10.0

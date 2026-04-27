@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot name="arm">
+    <group name="arm">
+        <joint name="rotating_base_joint"/>
+        <joint name="link1_joint"/>
+        <joint name="link2_joint"/>
+        <joint name="link3_joint"/>
+        <joint name="link4_joint"/>
+    </group>
+    <group name="end_effector">
+        <joint name="link5_joint"/>
+    </group>
+
+    <group_state name="Hail_hydra" group="arm">
+        <joint name="link1_joint" value="-0.3992"/>
+        <joint name="link2_joint" value="1.3712"/>
+        <joint name="link3_joint" value="3.14"/>
+        <joint name="link4_joint" value="3.14"/>
+        <joint name="rotating_base_joint" value="3.14"/>
+    </group_state>
+
+    <virtual_joint name="world_joint" type="fixed" parent_frame="world" child_link="base_link"/>
+
+    <passive_joint name="wheel1_joint"/>
+    <passive_joint name="wheel2_joint"/>
+    <passive_joint name="wheel3_joint"/>
+    <passive_joint name="wheel4_joint"/>
+
+    <disable_collisions link1="base_link" link2="rotating_base" reason="Adjacent"/>
+    <disable_collisions link1="base_link" link2="wheel1" reason="Adjacent"/>
+    <disable_collisions link1="base_link" link2="wheel2" reason="Adjacent"/>
+    <disable_collisions link1="base_link" link2="wheel3" reason="Adjacent"/>
+    <disable_collisions link1="base_link" link2="wheel4" reason="Adjacent"/>
+    <disable_collisions link1="link1" link2="link2" reason="Adjacent"/>
+    <disable_collisions link1="link1" link2="rotating_base" reason="Adjacent"/>
+    <disable_collisions link1="link1" link2="wheel1" reason="Never"/>
+    <disable_collisions link1="link1" link2="wheel2" reason="Never"/>
+    <disable_collisions link1="link1" link2="wheel3" reason="Never"/>
+    <disable_collisions link1="link1" link2="wheel4" reason="Never"/>
+    <disable_collisions link1="link2" link2="link3" reason="Adjacent"/>
+    <disable_collisions link1="link2" link2="link4" reason="Default"/>
+    <disable_collisions link1="link2" link2="link5" reason="Default"/>
+    <disable_collisions link1="link2" link2="wheel1" reason="Never"/>
+    <disable_collisions link1="link2" link2="wheel2" reason="Never"/>
+    <disable_collisions link1="link2" link2="wheel3" reason="Never"/>
+    <disable_collisions link1="link2" link2="wheel4" reason="Never"/>
+    <disable_collisions link1="link3" link2="link4" reason="Adjacent"/>
+    <disable_collisions link1="link3" link2="link5" reason="Default"/>
+    <disable_collisions link1="link3" link2="wheel1" reason="Never"/>
+    <disable_collisions link1="link3" link2="wheel2" reason="Never"/>
+    <disable_collisions link1="link3" link2="wheel3" reason="Never"/>
+    <disable_collisions link1="link3" link2="wheel4" reason="Never"/>
+    <disable_collisions link1="link4" link2="link5" reason="Adjacent"/>
+    <disable_collisions link1="link4" link2="wheel1" reason="Never"/>
+    <disable_collisions link1="link4" link2="wheel2" reason="Never"/>
+    <disable_collisions link1="link4" link2="wheel3" reason="Never"/>
+    <disable_collisions link1="link4" link2="wheel4" reason="Never"/>
+    <disable_collisions link1="link5" link2="wheel1" reason="Never"/>
+    <disable_collisions link1="link5" link2="wheel2" reason="Never"/>
+    <disable_collisions link1="link5" link2="wheel3" reason="Never"/>
+    <disable_collisions link1="link5" link2="wheel4" reason="Never"/>
+    <disable_collisions link1="rotating_base" link2="wheel1" reason="Never"/>
+    <disable_collisions link1="rotating_base" link2="wheel2" reason="Never"/>
+    <disable_collisions link1="rotating_base" link2="wheel3" reason="Never"/>
+    <disable_collisions link1="rotating_base" link2="wheel4" reason="Never"/>
+    <disable_collisions link1="wheel1" link2="wheel2" reason="Never"/>
+    <disable_collisions link1="wheel1" link2="wheel3" reason="Never"/>
+    <disable_collisions link1="wheel1" link2="wheel4" reason="Never"/>
+    <disable_collisions link1="wheel2" link2="wheel3" reason="Never"/>
+    <disable_collisions link1="wheel2" link2="wheel4" reason="Never"/>
+    <disable_collisions link1="wheel3" link2="wheel4" reason="Never"/>
+</robot>

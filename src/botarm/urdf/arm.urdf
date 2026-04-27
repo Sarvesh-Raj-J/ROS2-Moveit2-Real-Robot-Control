@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="arm">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00019243 3.3007E-11 0.0060752"
+        rpy="0 0 0" />
+      <mass
+        value="0.43438" />
+      <inertia
+        ixx="0.001538"
+        ixy="1.8832E-13"
+        ixz="-3.1375E-06"
+        iyy="0.003042"
+        iyz="-5.0193E-14"
+        izz="0.0043855" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel1">
+    <inertial>
+      <origin
+        xyz="0 -5.5511E-17 -0.012949"
+        rpy="0 0 0" />
+      <mass
+        value="0.12893" />
+      <inertia
+        ixx="5.7923E-05"
+        ixy="1.797E-09"
+        ixz="1.6941E-21"
+        iyy="5.7925E-05"
+        iyz="-6.3788E-21"
+        izz="0.00010069" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/wheel1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/wheel1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel1_joint"
+    type="continuous">
+    <origin
+      xyz="0.125 0.13 -0.0175"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="50"
+      velocity="50" />
+    <dynamics
+      damping="0.2"
+      friction="0.25" />
+  </joint>
+  <link
+    name="wheel2">
+    <inertial>
+      <origin
+        xyz="0 0 -0.012949"
+        rpy="0 0 0" />
+      <mass
+        value="0.12893" />
+      <inertia
+        ixx="5.7926E-05"
+        ixy="-1.0839E-09"
+        ixz="-1.0164E-20"
+        iyy="5.7922E-05"
+        iyz="6.9964E-21"
+        izz="0.00010069" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/wheel2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/wheel2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel2_joint"
+    type="continuous">
+    <origin
+      xyz="-0.125 0.13 -0.0175"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="50"
+      velocity="50" />
+    <dynamics
+      damping="0.2"
+      friction="0.25" />
+  </joint>
+  <link
+    name="wheel3">
+    <inertial>
+      <origin
+        xyz="2.2204E-16 -5.5511E-17 0.012949"
+        rpy="0 0 0" />
+      <mass
+        value="0.12893" />
+      <inertia
+        ixx="5.7922E-05"
+        ixy="-7.1036E-10"
+        ixz="1.5247E-20"
+        iyy="5.7926E-05"
+        iyz="-3.2219E-21"
+        izz="0.00010069" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/wheel3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/wheel3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel3_joint"
+    type="continuous">
+    <origin
+      xyz="0.125 -0.13 -0.0175"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      effort="50"
+      velocity="50" />
+    <dynamics
+      damping="0.2"
+      friction="0.25" />
+  </joint>
+  <link
+    name="wheel4">
+    <inertial>
+      <origin
+        xyz="2.2204E-16 0 0.012949"
+        rpy="0 0 0" />
+      <mass
+        value="0.12893" />
+      <inertia
+        ixx="5.7922E-05"
+        ixy="-2.6154E-10"
+        ixz="1.3553E-20"
+        iyy="5.7926E-05"
+        iyz="-3.2338E-21"
+        izz="0.00010069" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/wheel4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/wheel4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel4_joint"
+    type="continuous">
+    <origin
+      xyz="-0.125 -0.13 -0.0175"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      effort="50"
+      velocity="50" />
+    <dynamics
+      damping="0.2"
+      friction="0.25" />
+  </joint>
+  <link
+    name="rotating_base">
+    <inertial>
+      <origin
+        xyz="-0.013969 -0.0025099 0.022052"
+        rpy="0 0 0" />
+      <mass
+        value="0.14233" />
+      <inertia
+        ixx="8.7679E-05"
+        ixy="9.0601E-07"
+        ixz="7.5871E-06"
+        iyy="8.2798E-05"
+        iyz="1.3633E-06"
+        izz="8.0876E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/rotating_base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/rotating_base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rotating_base_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0575"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rotating_base" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="20" />
+  </joint>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="0.0699998879741024 -0.00631835962652538 -3.70071256972082E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.14095311416068" />
+      <inertia
+        ixx="3.1462032524667E-05"
+        ixy="-3.40431825537412E-11"
+        ixz="-5.98694462705478E-11"
+        iyy="0.000440417713670742"
+        iyz="1.86188731668641E-11"
+        izz="0.000421295262324613" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link1_joint"
+    type="revolute">
+    <origin
+      xyz="0.0039863 0.00043279 0.040958"
+      rpy="3.1416 -1.2509 -1.393" />
+    <parent
+      link="rotating_base" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="20" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="0.025044 0.023207 1.5379E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.098855" />
+      <inertia
+        ixx="1.7663E-05"
+        ixy="-7.0159E-09"
+        ixz="-7.106E-08"
+        iyy="6.4781E-05"
+        iyz="1.8891E-10"
+        izz="6.6788E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link2_joint"
+    type="revolute">
+    <origin
+      xyz="0.14 0 0"
+      rpy="0 -1.5388 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="15" />
+  </joint>
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="0.0088938 0.0018866 0.022672"
+        rpy="0 0 0" />
+      <mass
+        value="0.029888" />
+      <inertia
+        ixx="6.0892E-06"
+        ixy="2.0842E-08"
+        ixz="-2.2477E-08"
+        iyy="6.7402E-06"
+        iyz="-4.4192E-07"
+        izz="3.5974E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+<joint name="link3_joint" type="revolute">
+  <origin xyz="0.090155 0.014424 -0.0052884"
+          rpy="1.5708 -0.63394 1.5708"/>
+  <parent link="link2"/>
+  <child link="link3"/>
+  <axis xyz="0 1 0"/>
+  <limit lower="-1.57" upper="1.57" effort="10" velocity="15"/>
+</joint>
+  <link
+    name="link4">
+    <inertial>
+      <origin
+        xyz="0.0016482 -0.034386 -0.0024567"
+        rpy="0 0 0" />
+      <mass
+        value="0.024884" />
+      <inertia
+        ixx="6.911E-06"
+        ixy="8.4747E-07"
+        ixz="5.6339E-08"
+        iyy="3.527E-06"
+        iyz="-5.5705E-07"
+        izz="5.5539E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="link4_joint" type="revolute">
+  <origin xyz="0.0094812 0.013878 0.030746"
+          rpy="-1.5708 -0.46266 -0.035421"/>
+  <parent link="link3"/>
+  <child link="link4"/>
+  <axis xyz="1 0 0"/>
+  <limit lower="-1.57" upper="1.57" effort="10" velocity="10"/>
+</joint>
+  <link
+    name="link5">
+    <inertial>
+      <origin
+        xyz="0.0024149 0.0035268 -0.00083621"
+        rpy="0 0 0" />
+      <mass
+        value="0.00022979" />
+      <inertia
+        ixx="5.2638E-09"
+        ixy="-2.7534E-09"
+        ixz="4.1376E-10"
+        iyy="3.1279E-09"
+        iyz="6.0427E-10"
+        izz="7.5416E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://botarm/meshes/link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="link5_joint" type="revolute">
+  <origin xyz="0.01254 -0.03831 -0.013494"
+          rpy="3.1416 -1.5708 0"/>
+  <parent link="link4"/>
+  <child link="link5"/>
+  <axis xyz="0 0 1"/>
+  <limit lower="-1.57" upper="1.57" effort="10" velocity="10"/>
+</joint>
+</robot>

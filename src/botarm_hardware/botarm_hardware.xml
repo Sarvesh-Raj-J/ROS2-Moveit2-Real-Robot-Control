@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<library path="botarm_hardware">
+  <class
+    name="botarm_hardware/BotarmSystem"
+    type="botarm_hardware::BotarmSystem"
+    base_class_type="hardware_interface::SystemInterface">
+    <description>Botarm ros2_control SystemInterface plugin.</description>
+  </class>
+</library>

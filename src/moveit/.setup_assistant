@@ -1,0 +1,23 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: arm
+    relative_path: urdf/arm.urdf
+  srdf:
+    relative_path: config/arm.srdf
+  package_settings:
+    author_name: Sarvesh
+    author_email: sarveshraj5002@gmail.com
+    generated_timestamp: 1773403407
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position

@@ -1,0 +1,68 @@
+# PCA9685 channel map and calibration for 180-degree servos
+# Update channels/min/max/center for your actual wiring and calibration.
+
+pca9685:
+  i2c_bus: 1
+  address: 0x40
+  frequency_hz: 50
+
+joints:
+  rotating_base_joint:
+    channel: 0
+    min_deg: 0
+    max_deg: 180
+    center_deg: 90
+  link1_joint:
+    channel: 1
+    min_deg: 0
+    max_deg: 180
+    center_deg: 90
+  link2_joint:
+    channel: 2
+    min_deg: 0
+    max_deg: 180
+    center_deg: 90
+  link3_joint:
+    channel: 3
+    min_deg: 0
+    max_deg: 180
+    center_deg: 90
+  link4_joint:
+    channel: 4
+    min_deg: 0
+    max_deg: 180
+    center_deg: 90
+  link5_joint:
+    channel: 5
+    min_deg: 0
+    max_deg: 180
+    center_deg: 90
+
+  # Wheels included because your URDF exposes them.
+  wheel1_joint:
+    channel: 6
+    min_deg: 0
+    max_deg: 180
+    center_deg: 90
+  wheel2_joint:
+    channel: 7
+    min_deg: 0
+    max_deg: 180
+    center_deg: 90
+  wheel3_joint:
+    channel: 8
+    min_deg: 0
+    max_deg: 180
+    center_deg: 90
+  wheel4_joint:
+    channel: 9
+    min_deg: 0
+    max_deg: 180
+    center_deg: 90
+
+  # Example gripper channel (adjust/remove based on your hardware)
+  gripper_joint:
+    channel: 10
+    min_deg: 0
+    max_deg: 180
+    center_deg: 90

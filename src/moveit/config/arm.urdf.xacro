@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="arm">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+    <xacro:arg name="ros2_control_hardware_type" default="mock_components/GenericSystem" />
+    <xacro:arg name="ros2_control_system_name" default="ArmSystem" />
+    <xacro:arg name="serial_port" default="/dev/ttyAMA0" />
+    <xacro:arg name="baud_rate" default="115200" />
+    <xacro:arg name="loopback_mode" default="true" />
+
+    <!-- Import arm urdf file -->
+    <xacro:include filename="$(find botarm)/urdf/arm.urdf" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="arm.ros2_control.xacro" />
+
+
+    <xacro:arm_ros2_control
+      name="$(arg ros2_control_system_name)"
+      initial_positions_file="$(arg initial_positions_file)"
+      hardware_plugin="$(arg ros2_control_hardware_type)"
+      serial_port="$(arg serial_port)"
+      baud_rate="$(arg baud_rate)"
+      loopback_mode="$(arg loopback_mode)"/>
+
+</robot>
