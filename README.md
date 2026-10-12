@@ -8,6 +8,23 @@ The project is designed as a practical reference for teams who want to:
 - Run ros2_control close to hardware on the Pi.
 - Adapt the stack to their own URDF, joints, controllers, and transport layer.
 
+## Robot demonstration
+
+<video controls autoplay muted loop playsinline poster="media/main-robot.jpeg" width="100%">
+  <source src="media/main-demo.mp4" type="video/mp4">
+  <a href="media/main-demo.mp4">Watch the robot demonstration video</a>
+</video>
+
+The main demonstration above is also available as an image for GitHub clients that do not render embedded video:
+
+![Robot demonstration](media/main-robot.jpeg)
+
+Additional project media is available in the [`media/`](media/) folder:
+
+- [Robot demonstration 1](media/robot-demo-1.mp4)
+- [Robot demonstration 2](media/robot-demo-2.mp4)
+- [Robot photo](media/robot-photo-1.jpeg)
+
 ## System architecture
 
 - Laptop: MoveIt 2 (move_group + RViz + planning).
